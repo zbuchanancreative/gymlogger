@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/minusReps"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_subtract"
+        app:layout_constraintEnd_toStartOf="@+id/editReps"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editReps"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        style="@style/EditTextDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/minusReps"
+        app:layout_constraintEnd_toStartOf="@+id/addReps"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/minusReps"
+        android:inputType="number" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addReps"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@+id/minusReps"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editReps"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="LABEL"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="@+id/addReps"
+        app:layout_constraintStart_toStartOf="@+id/minusReps"
+        app:layout_constraintTop_toBottomOf="@+id/editReps" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

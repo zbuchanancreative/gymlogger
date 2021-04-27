@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Fortis</string>
+    <string name="push_me">PUSH MEE</string>
+    <string name="lbs">LBS</string>
+    <string name="zero">0</string>
+    <string name="fourty_five">45</string>
+    <string name="plate_45">45</string>
+    <string name="plate_35">35</string>
+    <string name="plate_25">25</string>
+    <string name="plate_10">10</string>
+    <string name="plate_5">5</string>
+    <string name="plate_2point5">2.5</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="zero_time">0:00:000</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <string name="workout_name">Workout Name</string>
+    <string name="reps">Reps</string>
+    <string name="clear">Clear</string>
+    <string name="minus">Minus</string>
+    <string name="add">+1</string>
+    <string name="bar_weight">Bar Weight</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="next_set">Next Set</string>
+    <string name="set_saved">Saved Exercise Set</string>
+    <string name="save_error">There was an error saving exercise, please try again.</string>
+    <string name="saved_exercise">Exercise Saved!</string>
+    <string name="cancel_exercise_message">Cancel Exercise</string>
+    <string name="stay">Stay</string>
+    <string name="view_logs">View Logs</string>
+    <string name="log_exercise">Log Exercise</string>
+    <string name="enter_reps"># Of Reps:</string>
+    <string name="freeweight_weight">Freeweight weight</string>
+    <string name="number_of_weights">Number of weights</string>
+    <string name="log_name">Log Name</string>
+    <string name="search_exercises">Find Your Exercise</string>
+    <string name="no_results">No Results</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Routines -->
+    <string name="failure_on_add_routine">Failure to Add Routine</string>
+    <string name="routine_id_missing">Routine ID Missing</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_incorrect_credentials">The credentials were incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <string name="menu_home">home</string>
+    <string name="menu_log">log</string>
+    <string name="menu_stats">stats</string>
+    <string name="nextExercise">Next Exercise</string>
+    <string name="barbell_representation">Barbell representation</string>
+    <string name="oneTwoThree">123</string>
+
+
+    <string name="server_url">http://10.0.2.2</string>
+    <string name="no_routines_yet">No Routines Yet</string>
+    <string name="finish">FINISH</string>
+    <string name="edit_routine">edit routine</string>
+    <string name="delete_routine">delete routine</string>
+    <string name="routine">Routine</string>
+
+    <string name="user_info">Your Email: %s</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in_to_routines">Sign in to Create and Complete Routines!</string>
+    <string name="sign_in_to_edit_routines">Sign in to Edit Your Routines</string>
+    <string name="sign_in_to_log_exercises">Sign in to Log Exercises!</string>
+    <string name="sign_in_to_view_history">Sign in to view exercise History!</string>
+    <string name="sign_in_routines">Sign in to create and complete routines!</string>
+    <string name="no_data">No Data Since %s</string>
+    <string name="do_you_agree_to_privacy_policy">Do you agree to our Privacy Policy?</string>
+    <string name="i_agree">I Agree</string>
+    <string name="open_policy">Open Policy</string>
+</resources>

@@ -1,0 +1,141 @@
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.buchanancreative.gymlogger"
+        minSdkVersion 23
+        targetSdkVersion 28
+
+//      Set the first two digits of the version code to the targetSdkVersion, e.g. 25
+//      Set the next three digits to the product version, e.g. 152 for a product version of 1.5.2
+//      Set the next two digits to build or release number, e.g. 01
+//      Reserve the last two digits for a multi-APK variant, e.g. 00
+        versionCode 28040100
+
+        versionName "0.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+}
+
+dependencies {
+    // Dependencies for working with Architecture components
+    // You'll probably have to update the version numbers in guild.gradle (Project)
+    implementation 'androidx.room:room-runtime:2.1.0-alpha03'
+    annotationProcessor 'androidx.room:room-compiler:2.1.0-alpha03'
+    kapt 'androidx.room:room-compiler:2.1.0-alpha03'
+    apply plugin: 'kotlin-android-extensions'
+    androidTestImplementation 'androidx.room:room-testing:2.1.0-alpha03'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation "androidx.arch.core:core-testing:2.0.0"
+
+
+    implementation 'com.google.android.material:material:1.1.0-alpha02'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+    implementation 'com.google.firebase:firebase-database:19.1.0'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha02"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
+
+    implementation "androidx.room:room-coroutines:${roomVersion}"
+
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+
+    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+
+
+
+
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'androidx.legacy:legacy-support-core-utils:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha01'
+    // 3rd Party
+    implementation 'com.jjoe64:graphview:4.2.1'
+    implementation 'com.android.support:design:28.0.0'
+    implementation project(path: ':loggerlibrary')
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+
+
+    implementation 'com.google.android.gms:play-services-wearable:16.0.1'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    def nav_version = "2.3.0-alpha01"
+
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Dynamic Feature Module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+}
+
+
+apply plugin: 'com.google.gms.google-services'
+repositories {
+
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.google.android.gms') {
+                details.useVersion '12.0.1'
+            }
+            if (requested.group == 'com.google.firebase') {
+                details.useVersion '12.0.1'
+            }
+        }
+    }
+
+    maven { url 'https://jitpack.io' }
+    mavenCentral()
+}

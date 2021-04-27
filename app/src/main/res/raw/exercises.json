@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Barbell Bench Press",
+    "log_type": "barbell",
+	"uuid": "d17b469e-b9b7-11e7-abc4-cec278b6b50a"
+  },
+  {
+    "name": "Squat",
+    "log_type": "barbell",
+	"uuid": "d17b4900-b9b7-11e7-abc4-cec278b6b50a"
+  },
+  {
+    "name": "Deadlift",
+    "log_type": "barbell",
+	"uuid":	"d17b49fa-b9b7-11e7-abc4-cec278b6b50a"
+  },
+  {
+    "name": "Plank",
+    "log_type": "time",
+	"uuid": "d17b5238-b9b7-11e7-abc4-cec278b6b50a"
+  },
+  {
+    "name": "Low Row",
+    "log_type": "machine",
+	"uuid": "d17b54ea-b9b7-11e7-abc4-cec278b6b50a"
+  },
+  {
+    "name": "Pull Down",
+    "log_type": "machine",
+	"uuid": "d17b5634-b9b7-11e7-abc4-cec278b6b50a"
+  },
+  {
+    "name": "Pull Up",
+    "log_type": "body_weight",
+	"uuid": "d17b5706-b9b7-11e7-abc4-cec278b6b50a"
+  },
+  {
+    "name": "Push Up",
+    "log_type": "body_weight",
+	"uuid": "d17b57ce-b9b7-11e7-abc4-cec278b6b50a"
+  },
+  {
+    "name": "Ab Rollout",
+    "log_type": "body_weight",
+	"uuid": "d17b588c-b9b7-11e7-abc4-cec278b6b50a"
+  },
+  {
+    "name": "Weighted Lunges",
+    "log_type": "free_weight",
+    "uuid": "d17b588d-b9b7-11e7-abc4-cec278b6b50a"
+  }
+]
+

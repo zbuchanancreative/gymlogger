@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "128639434276",
+    "firebase_url": "https://develop-logger.firebaseio.com",
+    "project_id": "develop-logger",
+    "storage_bucket": "develop-logger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128639434276:android:429650acd4cacf4992a2b1",
+        "android_client_info": {
+          "package_name": "com.buchanancreative.gymlogger.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128639434276-vj9kr34ov41demrrl53qptq29vqcj3mv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzpQXCGgFKDBLMQoqVG0JVNbjmd6aWcqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128639434276-vj9kr34ov41demrrl53qptq29vqcj3mv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

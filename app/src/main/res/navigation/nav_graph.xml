@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/exercisesFragment">
+
+    <fragment
+        android:id="@+id/exercisesFragment"
+        android:name="com.buchanancreative.gymlogger.View.ExercisesFragment"
+        android:label="ExercisesFragment" >
+        <action
+            android:id="@+id/action_exercisesFragment_to_bodyweightLogFragment"
+            app:destination="@id/bodyweightLogFragment" />
+        <action
+            android:id="@+id/action_exercisesFragment_to_barbellLogFragment"
+            app:destination="@id/barbellLogFragment" />
+        <action
+            android:id="@+id/action_exercisesFragment_to_timeLogFragment"
+            app:destination="@id/timeLogFragment" />
+        <action
+            android:id="@+id/action_exercisesFragment_to_freeweightLogFragment"
+            app:destination="@id/freeweightLogFragment" />
+        <action
+            android:id="@+id/action_exercisesFragment_to_machineLogFragment"
+            app:destination="@id/machineLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barbellLogFragment"
+        android:name="com.buchanancreative.gymlogger.View.LogFragments.BarbellLogFragment"
+        android:label="BarbellLogFragment" >
+        <argument
+            android:name="exerciseId"
+            app:argType="string" />
+        <argument
+            android:name="exerciseName"
+            app:argType="string" />
+        <argument
+            android:name="exerciseType"
+            app:argType="com.buchanancreative.loggerlibrary.Model.ExerciseType"
+            android:defaultValue="Barbell" />
+    </fragment>
+    <fragment
+        android:id="@+id/bodyweightLogFragment"
+        android:name="com.buchanancreative.gymlogger.View.LogFragments.BodyweightLogFragment"
+        android:label="BodyweightLogFragment" >
+        <argument
+            android:name="exerciseId"
+            app:argType="string" />
+        <argument
+            android:name="exerciseName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/freeweightLogFragment"
+        android:name="com.buchanancreative.gymlogger.View.LogFragments.FreeweightLogFragment"
+        android:label="FreeweightLogFragment" >
+        <argument
+            android:name="exerciseName"
+            app:argType="string" />
+        <argument android:name="exerciseId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeLogFragment"
+        android:name="com.buchanancreative.gymlogger.View.LogFragments.TimeLogFragment"
+        android:label="TimeLogFragment" >
+        <argument
+            android:name="exerciseName"
+            app:argType="string" />
+        <argument android:name="exerciseId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/routinesFragment"
+        android:name="com.buchanancreative.gymlogger.View.RoutinesFragment"
+        android:label="RoutinesFragment" >
+        <action
+            android:id="@+id/action_routinesFragment_to_completeRoutineFragment"
+            app:destination="@id/completeRoutineFragment" />
+        <action
+            android:id="@+id/action_routinesFragment_to_createRoutineFragment"
+            app:destination="@id/createRoutineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logHistoryListFragment"
+        android:name="com.buchanancreative.gymlogger.View.Stats.LogHistoryListFragment"
+        android:label="LogHistoryListFragment" >
+        <action
+            android:id="@+id/action_logHistoryListFragment_to_logGraphFragment"
+            app:destination="@id/logGraphFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completeRoutineFragment"
+        android:name="com.buchanancreative.gymlogger.View.CompleteRoutineFragment"
+        android:label="CompleteRoutineFragment" >
+        <argument
+            android:name="routineId"
+            app:argType="string" />
+        <argument
+            android:name="routineName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_completeRoutineFragment_to_bodyweightLogFragment"
+            app:destination="@id/bodyweightLogFragment" />
+        <action
+            android:id="@+id/action_completeRoutineFragment_to_barbellLogFragment"
+            app:destination="@id/barbellLogFragment" />
+        <action
+            android:id="@+id/action_completeRoutineFragment_to_machineLogFragment"
+            app:destination="@id/machineLogFragment" />
+        <action
+            android:id="@+id/action_completeRoutineFragment_to_freeweightLogFragment"
+            app:destination="@id/freeweightLogFragment" />
+        <action
+            android:id="@+id/action_completeRoutineFragment_to_timeLogFragment"
+            app:destination="@id/timeLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createRoutineFragment"
+        android:name="com.buchanancreative.gymlogger.View.CreateRoutineFragment"
+        android:label="CreateRoutineFragment" >
+        <argument
+            android:name="routineId"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/logGraphFragment"
+        android:name="com.buchanancreative.gymlogger.View.Stats.LogGraphFragment"
+        android:label="LogGraphFragment" >
+        <argument
+            android:name="exerciseId"
+            app:argType="string" />
+        <argument
+            android:name="exerciseName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="logType"
+            app:argType="com.buchanancreative.loggerlibrary.Model.LogType" />
+    </fragment>
+    <fragment
+        android:id="@+id/machineLogFragment"
+        android:name="com.buchanancreative.gymlogger.View.LogFragments.MachineLogFragment"
+        android:label="MachineLogFragment" >
+        <argument
+            android:name="exerciseName"
+            app:argType="string" />
+        <argument
+            android:name="exerciseId"
+            app:argType="string" />
+    </fragment>
+</navigation>

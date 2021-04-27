@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/no_results_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_results"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/text_size_default"
+        android:visibility="gone" />
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_toStartOf="@+id/signIn"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search_exercises" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/exercise_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_view"
+        android:padding="@dimen/default_padding" />
+
+    <ImageButton
+        android:id="@+id/signIn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/exercise_list"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="13dp"
+        android:background="@color/fui_transparent"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/gear"
+        tools:src="@drawable/ic_gear" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:foregroundTint="@color/primary"
+        android:backgroundTint="@color/primary"
+        android:visibility="invisible"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>
